@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Star Restaurants in India</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lora:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Inline CSS -->
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Lora', serif;
+        }
+
+        /* Body Styling */
+        body {
+            background: linear-gradient(135deg, #2a2a72, #fdbb2d);
+            color: #fff;
+            line-height: 1.6;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            200% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #fdbb2d; }
+            50% { box-shadow: 0 0 15px #fdbb2d, 0 0 30px #fdbb2d; }
+            100% { box-shadow: 0 0 5px #fdbb2d; }
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 100px 20px;
+            margin-bottom: 40px;
+            border-bottom: 6px solid #fdbb2d;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #fdbb2d;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .header p {
+            font-size: 24px;
+            color: #ddd;
+            font-weight: 300;
+            margin-bottom: 40px;
+            animation: fadeIn 1.8s ease-out;
+        }
+
+        /* Restaurant List Section */
+        .restaurant-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+            justify-content: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        /* Restaurant Card */
+        .restaurant {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 320px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            padding: 20px;
+            color: #333;
+            background: linear-gradient(135deg, #f9f9f9, #f6d365);
+        }
+
+        .restaurant:hover {
+            transform: translateY(-15px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4);
+            animation: glow 1.5s infinite ease-in-out;
+        }
+
+        .restaurant img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: opacity 0.4s ease;
+        }
+
+        .restaurant:hover img {
+            opacity: 0.9;
+        }
+
+        .restaurant h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 30px;
+            margin: 20px 0;
+            color: #1f2a3b;
+            animation: fadeIn 1.5s ease-out;
+            text-transform: uppercase;
+        }
+
+        .restaurant p {
+            font-size: 16px;
+            padding: 0 20px 20px;
+            color: #555;
+            font-weight: 300;
+            animation: fadeIn 1.8s ease-out;
+        }
+
+        /* Button Styling */
+        .restaurant a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            background: #fdbb2d;
+            color: #fff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .restaurant a:hover {
+            background: #f6d365;
+            transform: scale(1.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            color: #1f2a3b;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            border-top: 5px solid #fdbb2d;
+            margin-top: 50px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>7-Star Restaurants in India</h1>
+        <p>Indulge in the luxury of India's most regal dining experiences.</p>
+    </header>
+    
+    <section class="restaurant-list">
+        <!-- Existing Restaurants -->
+        <div class="restaurant">
+            <img src="https://cdn.sanity.io/images/ocl5w36p/production/af5246c3d13e3c1532f525b290f5c33a3dd59d9e-1281x1760.jpg" alt="Taj Falaknuma Palace Adaa">
+            <h2>Taj Falaknuma Palace - Adaa, Hyderabad</h2>
+            <p>Relive the royal experience with Nizami-inspired dishes at this majestic palace restaurant.</p>
+            <a href="https://www.tajhotels.com/en-in/hotels/taj-falaknuma-palace-hyderabad/restaurants/adaa">Delight in the world of luxury</a>
+        </div>
+
+        <div class="restaurant">
+            <img src="https://www.oberoihotels.com/-/media/oberoi-hotels/website-images/the-oberoi-udaivilas-udaipur/dining/overview/restaurant-1.jpg?w=836&hash=ac9fe9d3c2f85ad6d4063a98b78d4dd8" alt="The Oberoi Udaivilas">
+            <h2>The Oberoi Udaivilas - Udaipur</h2>
+            <p>Experience royal Rajasthan at this lakeside palace with exceptional views and cuisine.</p>
+            <a href="https://www.oberoihotels.com/">Delight in the world of luxury</a>
+        </div>
+
+        <div class="restaurant">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6eXiJu2f5n0H4fDzbYUUjfBk7yy6cReUHWg&s" alt="Taj Mahal Palace Wasabi by Morimoto">
+            <h2>Taj Mahal Palace - Wasabi by Morimoto, Mumbai</h2>
+            <p>A fusion of luxury and Japanese flavors awaits you at one of Mumbai's finest restaurants.</p>
+            <a href="https://www.tajhotels.com/en-in/hotels/taj-mahal-palace-mumbai/restaurants/wasabi-by-morimoto-mumbai">Delight in the world of luxury</a>
+        </div>
+
+        <!-- New Restaurants Added Below -->
+        <div class="restaurant">
+            <img src="https://www.theleela.com/prod/content/assets/styles/tl_1920_735/public/aio-banner/dekstop/The-Leela-Palace-New-Delhi-FAQ.jpg.webp?VersionId=jcBbuAmddS_S8d9.pZ2kzhiEhtiXcGJN&itok=DuyQ7Spv" alt="Leela Palace Le Cirque">
+            <h2>Leela Palace - Le Cirque, New Delhi</h2>
+            <p>Indulge in a fusion of French and Italian delicacies served in one of Delhi's most lavish settings.</p>
+            <a href="https://www.theleela.com/the-leela-palace-new-delhi/restaurants/le-cirque">Delight in the world of luxury</a>
+        </div>
+
+        <div class="restaurant">
+            <img src="https://www.hotelsjaipur.com/rambaghpalacejaipur.jpg" alt="Rambagh Palace Suvarna Mahal">
+            <h2>Rambagh Palace - Suvarna Mahal, Jaipur</h2>
+            <p>Enjoy a regal dining experience with traditional Rajasthani delicacies in a palace setting.</p>
+            <a href="https://www.tajhotels.com/en-in/hotels/rambagh-palace-jaipur?gad_source=1&gclid=CjwKCAiA3Na5BhAZEiwAzrfagDs7xLeBpojrkiUdpKFUi0t4psHdO0_D9TUxd5u_aRU2hvIpX27kIxoC5f8QAvD_BwE">Delight in the world of luxury</a>
+        </div>
+
+        <div class="restaurant">
+            <img src="https://www.itchotels.com/content/dam/itchotels/in/umbrella/itc/hotels/itcgrandchola-chennai/images/overview/overview-desktop/exterior-dusk.png" alt="ITC Grand Chola Peshawri">
+            <h2>ITC Grand Chola - Peshawri, Chennai</h2>
+            <p>Immerse yourself in the flavors of North-West Frontier cuisine at the luxurious ITC Grand.</p>
+            <a href="https://www.itchotels.com/in/en/itcgrandchola-chennai">Delight in the world of luxury</a>
+        </div>
+
+        <div class="restaurant">
+            <img src="https://i.ytimg.com/vi/9o57q8KMbPc/maxresdefault.jpg" alt="Taj Lake Palace Neel Kamal">
+            <h2>Taj Lake Palace - Neel Kamal, Udaipur</h2>
+            <p>Enjoy traditional Mewari cuisine in one of the most beautiful palaces surrounded by tranquil waters.</p>
+            <a href="https://www.tajhotels.com/en-in/hotels/taj-lake-palace-udaipur/restaurants/neel-kamal">Delight in the world of luxury</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Finest Dining in India. All rights reserved.</p>
+    </footer>
+</body>
+</html>
